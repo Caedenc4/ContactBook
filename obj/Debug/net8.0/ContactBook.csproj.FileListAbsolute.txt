@@ -1,0 +1,15 @@
+/Users/cc/Documents/ContactBook/bin/Debug/net8.0/ContactBook
+/Users/cc/Documents/ContactBook/bin/Debug/net8.0/ContactBook.deps.json
+/Users/cc/Documents/ContactBook/bin/Debug/net8.0/ContactBook.runtimeconfig.json
+/Users/cc/Documents/ContactBook/bin/Debug/net8.0/ContactBook.dll
+/Users/cc/Documents/ContactBook/bin/Debug/net8.0/ContactBook.pdb
+/Users/cc/Documents/ContactBook/obj/Debug/net8.0/ContactBook.GeneratedMSBuildEditorConfig.editorconfig
+/Users/cc/Documents/ContactBook/obj/Debug/net8.0/ContactBook.AssemblyInfoInputs.cache
+/Users/cc/Documents/ContactBook/obj/Debug/net8.0/ContactBook.AssemblyInfo.cs
+/Users/cc/Documents/ContactBook/obj/Debug/net8.0/ContactBook.csproj.CoreCompileInputs.cache
+/Users/cc/Documents/ContactBook/obj/Debug/net8.0/ContactBook.sourcelink.json
+/Users/cc/Documents/ContactBook/obj/Debug/net8.0/ContactBook.dll
+/Users/cc/Documents/ContactBook/obj/Debug/net8.0/refint/ContactBook.dll
+/Users/cc/Documents/ContactBook/obj/Debug/net8.0/ContactBook.pdb
+/Users/cc/Documents/ContactBook/obj/Debug/net8.0/ContactBook.genruntimeconfig.cache
+/Users/cc/Documents/ContactBook/obj/Debug/net8.0/ref/ContactBook.dll

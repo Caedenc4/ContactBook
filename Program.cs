@@ -1,16 +1,17 @@
-using System.Text.Json;
+﻿using System.Text.Json;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
+
 public class ContactBook
 {
     string filePath = "database.json";
 
-    public void InitializeDatabase()
+    public void database()
     {
         if (!File.Exists(filePath))
         {
-            File.WriteAllText(filePath, "[]"); 
+            File.WriteAllText(filePath, "[]");
             Console.WriteLine("Database created.");
         }
     }
@@ -23,7 +24,7 @@ public class ContactBook
         public string Email { get; set; }
         public string ProfileIcon { get; set; }
     }
-    
+
     public void AddContact(Contact newContact)
     {
         var contacts = LoadContacts();
@@ -82,9 +83,7 @@ public class ContactBook
     public static void Main(string[] args)
     {
         var contactBook = new ContactBook();
-        contactBook.InitializeDatabase();
-        
-        Console.Clear();
+        contactBook.database();
 
         while (true)
         {
@@ -99,15 +98,15 @@ public class ContactBook
             Console.Write("Choose an option: ");
             if (!int.TryParse(Console.ReadLine(), out int choice))
             {
-                Console.WriteLine("Invalid input. Press Enter to try again.");
+                Console.WriteLine("Press Enter to try again");
                 Console.ReadLine();
                 continue;
-                Console.Clear();
             }
 
             switch (choice)
             {
                 case 1:
+                    Console.Clear();
                     var newContact = new Contact();
                     Console.Write("Enter Id: ");
                     newContact.Id = int.Parse(Console.ReadLine());
@@ -118,9 +117,12 @@ public class ContactBook
                     Console.Write("Enter Email: ");
                     newContact.Email = Console.ReadLine();
                     contactBook.AddContact(newContact);
+                    Console.WriteLine("Press Enter to return to menu.");
+                    Console.ReadLine();
                     break;
 
                 case 2:
+                    Console.Clear();
                     Console.Write("Enter Id of the contact to edit: ");
                     int editId = int.Parse(Console.ReadLine());
                     Console.Write("Enter new Name: ");
@@ -130,27 +132,34 @@ public class ContactBook
                     Console.Write("Enter new Email: ");
                     string newEmail = Console.ReadLine();
                     contactBook.EditContact(editId, newName, newPhone, newEmail);
+                    Console.WriteLine("Press Enter to return to menu.");
+                    Console.ReadLine();
                     break;
 
                 case 3:
+                    Console.Clear();
                     Console.Write("Enter Id of the contact to delete: ");
                     int deleteId = int.Parse(Console.ReadLine());
                     contactBook.DeleteContact(deleteId);
+                    Console.WriteLine("Press Enter to return to menu.");
+                    Console.ReadLine();
                     break;
 
                 case 4:
                     Console.Clear();
                     contactBook.ViewContacts();
+                    Console.WriteLine("Press Enter to return to menu.");
                     Console.ReadLine();
-
                     break;
 
                 case 5:
-                    Console.WriteLine("Goodbye!");
+                    Console.Clear();
+                    Console.WriteLine("bye");
                     return;
 
                 default:
-                    Console.WriteLine("Invalid choice. Press Enter to try again.");
+                    Console.Clear();
+                    Console.WriteLine("Press Enter to try again");
                     Console.ReadLine();
                     break;
             }
